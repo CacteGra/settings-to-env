@@ -1,0 +1,5 @@
+Easily create a .env file inside the main folder of your Django project from the paramaters set using decouple in settings.py.
+
+You can either put this script in the parent folder of your Django project or indicate the path to it when running the script.
+
+Generate a .env file with 'test' values as default or enter manually the values you need for each decouple key. 
