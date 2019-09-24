@@ -37,7 +37,7 @@ def main():
     print(env_list)
     if not env_list:
         return 'Did not find decouple config in {}. Aborting.'.format(settings_path)
-    env_path = os.path.dirname(os.path.abspath(settings_path))
+    env_path = os.path.dirname(os.path.dirname(os.path.abspath(settings_path)))
     print(env_path)
     with open(env_path + '/' + '.env', 'w') as env_file:
        for i in env_list:
