@@ -27,6 +27,7 @@ def main():
     for line in settings_file:
         try:
             key = re.search('{0}(.+?){1}'.format(config[0],config[1]), line).group(1)
+            key = key.split("'", 1)[0]
             if custom_value.lower() == 'y':
                 value = input('Enter value for {}: '.format(key))
                 env_list.append({'key':key,'value':value})
