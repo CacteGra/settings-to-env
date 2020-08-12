@@ -22,7 +22,7 @@ def main():
         custom_value = input("Please answer with y or n.\n Do you wish to enter a custom value for each key? (if not 'test' will be set as value for all keys): ")
     with open(settings_path, 'r') as f:
         settings_file = f.readlines()
-    config = ["config\('","'\)"]
+    config = ["config\('","'"]
     env_list = []
     for line in settings_file:
         try:
