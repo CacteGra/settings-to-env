@@ -32,7 +32,10 @@ def main():
                 value = input('Enter value for {}: '.format(key))
                 env_list.append({'key':key,'value':value})
             else:
-                env_list.append({'key':key,'value':'test'})
+                if "cast=bool" in line:
+                    env_list.append({'key':key,'value':'True'})
+                else:
+                    env_list.append({'key':key,'value':'test})
         except AttributeError as e:
             pass
     print(env_list)
